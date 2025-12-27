@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberSec Portfolio | Network Security Specialist</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Scanline Overlay -->
+    <div class="scanlines"></div>
+    
+    <!-- Navigation -->
+    <nav class="cyber-nav">
+        <div class="nav-logo">
+            <span class="logo-bracket">[</span>
+            <span class="logo-text" data-text="NETADMIN">NETADMIN</span>
+            <span class="logo-bracket">]</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#hero" data-text="HOME">HOME</a></li>
+            <li><a href="#about" data-text="ABOUT">ABOUT</a></li>
+            <li><a href="#skills" data-text="SKILLS">SKILLS</a></li>
+            <li><a href="#projects" data-text="PROJECTS">PROJECTS</a></li>
+            <li><a href="#contact" data-text="CONTACT">CONTACT</a></li>
+        </ul>
+        <div class="nav-status">
+            <span class="status-indicator"></span>
+            <span class="status-text">SYSTEM ONLINE</span>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+        <canvas id="network-canvas"></canvas>
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="badge-icon">◈</span>
+                <span>NETWORK SECURITY SPECIALIST</span>
+            </div>
+            <h1 class="hero-title">
+                <span class="title-line" data-text="Securing the">Securing the</span>
+                <span class="title-line highlight" data-text="Network Infrastructure">Network Infrastructure</span>
+            </h1>
+            <p class="hero-subtitle">
+                Junior College Student | Cisco Networking Enthusiast | Linux Administrator
+            </p>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-value" data-count="15">0</span>
+                    <span class="stat-label">Network Projects</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value" data-count="50">0</span>
+                    <span class="stat-label">Devices Configured</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value" data-count="99.9">0</span>
+                    <span class="stat-label">% Uptime Goal</span>
+                </div>
+            </div>
+            <div class="hero-cta">
+                <a href="#skills" class="btn btn-primary">
+                    <span class="btn-text">View Skills</span>
+                    <span class="btn-icon">→</span>
+                </a>
+                <a href="#contact" class="btn btn-secondary">
+                    <span class="btn-text">Get In Touch</span>
+                </a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span class="scroll-text">SCROLL DOWN</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="section-header">
+            <span class="section-tag">&lt;/about&gt;</span>
+            <h2 class="section-title">System Profile</h2>
+            <p class="section-subtitle">Loading user credentials...</p>
+        </div>
+        
+        <div class="about-grid">
+            <!-- Cisco Card -->
+            <div class="glass-card cisco-card">
+                <div class="card-header">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="3" width="20" height="14" rx="2"/>
+                            <path d="M8 21h8"/>
+                            <path d="M12 17v4"/>
+                            <path d="M6 8h.01"/>
+                            <path d="M10 8h.01"/>
+                            <path d="M6 12h12"/>
+                        </svg>
+                    </div>
+                    <div class="card-status">
+                        <span class="status-dot active"></span>
+                        <span>ACTIVE</span>
+                    </div>
+                </div>
+                <h3 class="card-title">Cisco Networking</h3>
+                <p class="card-level">INTERMEDIATE LEVEL</p>
+                <div class="card-content">
+                    <ul class="skill-list">
+                        <li><span class="skill-icon">▸</span>Router & Switch Configuration</li>
+                        <li><span class="skill-icon">▸</span>VLAN Setup & Management</li>
+                        <li><span class="skill-icon">▸</span>Routing Protocols (OSPF, EIGRP)</li>
+                        <li><span class="skill-icon">▸</span>Access Control Lists (ACLs)</li>
+                        <li><span class="skill-icon">▸</span>Network Troubleshooting</li>
+                    </ul>
+                </div>
+                <div class="card-progress">
+                    <div class="progress-bar">
+                        <div class="progress-fill" data-progress="65"></div>
+                    </div>
+                    <span class="progress-text">65% Proficiency</span>
+                </div>
+                <div class="card-decoration"></div>
+            </div>
+
+            <!-- Linux Card -->
+            <div class="glass-card linux-card">
+                <div class="card-header">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 17l6-6-6-6"/>
+                            <path d="M12 19h8"/>
+                        </svg>
+                    </div>
+                    <div class="card-status">
+                        <span class="status-dot learning"></span>
+                        <span>LEARNING</span>
+                    </div>
+                </div>
+                <h3 class="card-title">Linux Administration</h3>
+                <p class="card-level">BEGINNER LEVEL</p>
+                <div class="card-content">
+                    <ul class="skill-list">
+                        <li><span class="skill-icon">▸</span>Basic Command Line Operations</li>
+                        <li><span class="skill-icon">▸</span>File System Navigation</li>
+                        <li><span class="skill-icon">▸</span>User & Permission Management</li>
+                        <li><span class="skill-icon">▸</span>Package Management (apt, yum)</li>
+                        <li><span class="skill-icon">▸</span>Basic Shell Scripting</li>
+                    </ul>
+                </div>
+                <div class="card-progress">
+                    <div class="progress-bar">
+                        <div class="progress-fill" data-progress="35"></div>
+                    </div>
+                    <span class="progress-text">35% Proficiency</span>
+                </div>
+                <div class="card-decoration"></div>
+            </div>
+
+            <!-- Profile Card -->
+            <div class="glass-card profile-card">
+                <div class="profile-avatar">
+                    <div class="avatar-ring"></div>
+                    <div class="avatar-placeholder">
+                        <span>JC</span>
+                    </div>
+                </div>
+                <h3 class="profile-name">Junior College Student</h3>
+                <p class="profile-title">Aspiring Network Security Specialist</p>
+                <div class="profile-bio">
+                    <p>Passionate about building secure network infrastructures. Currently pursuing studies in Information Technology with a focus on networking and cybersecurity.</p>
+                </div>
+                <div class="profile-tags">
+                    <span class="tag">#Networking</span>
+                    <span class="tag">#CyberSecurity</span>
+                    <span class="tag">#Cisco</span>
+                    <span class="tag">#Linux</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section - Server Rack Style -->
+    <section id="skills" class="skills-section">
+        <div class="section-header">
+            <span class="section-tag">&lt;/skills&gt;</span>
+            <h2 class="section-title">Skill Matrix</h2>
+            <p class="section-subtitle">Initializing system diagnostics...</p>
+        </div>
+
+        <!-- Terminal Container -->
+        <div class="terminal-container">
+            <div class="terminal-header">
+                <div class="terminal-buttons">
+                    <span class="term-btn close"></span>
+                    <span class="term-btn minimize"></span>
+                    <span class="term-btn maximize"></span>
+                </div>
+                <span class="terminal-title">admin@network-sec:~/skills</span>
+                <div class="terminal-actions">
+                    <span class="action-icon">⚙</span>
+                </div>
+            </div>
+            <div class="terminal-body">
+                <div class="terminal-output" id="terminal-output">
+                    <div class="terminal-line system">
+                        <span class="line-prefix">[SYSTEM]</span>
+                        <span class="line-content">Network Security Assessment Tool v2.5.1</span>
+                    </div>
+                    <div class="terminal-line system">
+                        <span class="line-prefix">[SYSTEM]</span>
+                        <span class="line-content">Establishing secure connection...</span>
+                    </div>
+                </div>
+                <div class="terminal-input-line">
+                    <span class="input-prompt">user@admin:~$</span>
+                    <span class="input-text" id="terminal-input"></span>
+                    <span class="cursor"></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Server Rack -->
+        <div class="server-rack">
+            <div class="rack-frame">
+                <div class="rack-header">
+                    <span class="rack-label">SKILL_RACK_01</span>
+                    <div class="rack-leds">
+                        <span class="led active"></span>
+                        <span class="led active"></span>
+                        <span class="led warning"></span>
+                    </div>
+                </div>
+                
+                <div class="rack-units">
+                    <!-- Skill Unit 1 -->
+                    <div class="rack-unit" data-skill="cisco">
+                        <div class="unit-handle"></div>
+                        <div class="unit-content">
+                            <div class="unit-leds">
+                                <span class="led-indicator active"></span>
+                                <span class="led-indicator active"></span>
+                                <span class="led-indicator active"></span>
+                                <span class="led-indicator"></span>
+                            </div>
+                            <div class="unit-info">
+                                <span class="unit-name">CISCO_NETWORKING</span>
+                                <span class="unit-status">OPERATIONAL</span>
+                            </div>
+                            <div class="unit-meter">
+                                <div class="meter-fill" style="--fill: 65%"></div>
+                            </div>
+                            <div class="unit-ports">
+                                <span class="port active"></span>
+                                <span class="port active"></span>
+                                <span class="port"></span>
+                                <span class="port"></span>
+                            </div>
+                        </div>
+                        <div class="unit-handle"></div>
+                    </div>
+
+                    <!-- Skill Unit 2 -->
+                    <div class="rack-unit" data-skill="routing">
+                        <div class="unit-handle"></div>
+                        <div class="unit-content">
+                            <div class="unit-leds">
+                                <span class="led-indicator active"></span>
+                                <span class="led-indicator active"></span>
+                                <span class="led-indicator active"></span>
+                                <span class="led-indicator"></span>
+                            </div>
+                            <div class="unit-info">
+                                <span class="unit-name">ROUTING_PROTOCOLS</span>
+                                <span class="unit-status">ACTIVE</span>
+                            </div>
+                            <div class="unit-meter">
+                                <div class="meter-fill" style="--fill: 60%"></div>
+                            </div>
+                            <div class="unit-ports">
+                                <span class="port active"></span>
+                                <span class="port active"></span>
+                                <span class="port active"></span>
+                                <span class="port"></span>
+                            </div>
+                        </div>
+                        <div class="unit-handle"></div>
+                    </div>
+
+                    <!-- Skill Unit 3 -->
+                    <div class="rack-unit" data-skill="switching">
+                        <div class="unit-handle"></div>
+                        <div class="unit-content">
+                            <div class="unit-leds">
+                                <span class="led-indicator active"></span>
+                                <span class="led-indicator active"></span>
+                                <span class="led-indicator"></span>
+                                <span class="led-indicator"></span>
+                            </div>
+                            <div class="unit-info">
+                                <span class="unit-name">SWITCHING_VLANS</span>
+                                <span class="unit-status">CONFIGURED</span>
+                            </div>
+                            <div class="unit-meter">
+                                <div class="meter-fill" style="--fill: 55%"></div>
+                            </div>
+                            <div class="unit-ports">
+                                <span class="port active"></span>
+                                <span class="port active"></span>
+                                <span class="port"></span>
+                                <span class="port"></span>
+                            </div>
+                        </div>
+                        <div class="unit-handle"></div>
+                    </div>
+
+                    <!-- Skill Unit 4 -->
+                    <div class="rack-unit" data-skill="linux">
+                        <div class="unit-handle"></div>
+                        <div class="unit-content">
+                            <div class="unit-leds">
+                                <span class="led-indicator active"></span>
+                                <span class="led-indicator"></span>
+                                <span class="led-indicator"></span>
+                                <span class="led-indicator"></span>
+                            </div>
+                            <div class="unit-info">
+                                <span class="unit-name">LINUX_ADMIN</span>
+                                <span class="unit-status">LEARNING</span>
+                            </div>
+                            <div class="unit-meter">
+                                <div class="meter-fill" style="--fill: 35%"></div>
+                            </div>
+                            <div class="unit-ports">
+                                <span class="port active"></span>
+                                <span class="port"></span>
+                                <span class="port"></span>
+                                <span class="port"></span>
+                            </div>
+                        </div>
+                        <div class="unit-handle"></div>
+                    </div>
+
+                    <!-- Skill Unit 5 -->
+                    <div class="rack-unit" data-skill="security">
+                        <div class="unit-handle"></div>
+                        <div class="unit-content">
+                            <div class="unit-leds">
+                                <span class="led-indicator active"></span>
+                                <span class="led-indicator active"></span>
+                                <span class="led-indicator"></span>
+                                <span class="led-indicator"></span>
+                            </div>
+                            <div class="unit-info">
+                                <span class="unit-name">NETWORK_SECURITY</span>
+                                <span class="unit-status">MONITORING</span>
+                            </div>
+                            <div class="unit-meter">
+                                <div class="meter-fill" style="--fill: 45%"></div>
+                            </div>
+                            <div class="unit-ports">
+                                <span class="port active"></span>
+                                <span class="port active"></span>
+                                <span class="port"></span>
+                                <span class="port"></span>
+                            </div>
+                        </div>
+                        <div class="unit-handle"></div>
+                    </div>
+                </div>
+
+                <div class="rack-footer">
+                    <span class="rack-power">PWR</span>
+                    <span class="rack-status">STATUS: ALL SYSTEMS NOMINAL</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+        <div class="section-header">
+            <span class="section-tag">&lt;/projects&gt;</span>
+            <h2 class="section-title">Network Deployments</h2>
+            <p class="section-subtitle">Recent infrastructure configurations...</p>
+        </div>
+
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-image">
+                    <div class="project-placeholder">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                            <path d="M2 17l10 5 10-5"/>
+                            <path d="M2 12l10 5 10-5"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <span class="project-tag">CISCO</span>
+                    <h3 class="project-title">Campus Network Design</h3>
+                    <p class="project-description">Designed and implemented a multi-VLAN campus network with inter-VLAN routing using Layer 3 switches.</p>
+                    <div class="project-tech">
+                        <span>OSPF</span>
+                        <span>VLANs</span>
+                        <span>STP</span>
+                    </div>
+                </div>
+                <div class="project-overlay">
+                    <a href="#" class="project-link">View Details →</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">
+                    <div class="project-placeholder">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="2" y="3" width="20" height="14" rx="2"/>
+                            <path d="M8 21h8"/>
+                            <path d="M12 17v4"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <span class="project-tag">LINUX</span>
+                    <h3 class="project-title">Home Lab Server Setup</h3>
+                    <p class="project-description">Configured a home lab environment with Ubuntu Server for network services testing and learning.</p>
+                    <div class="project-tech">
+                        <span>Ubuntu</span>
+                        <span>SSH</span>
+                        <span>Apache</span>
+                    </div>
+                </div>
+                <div class="project-overlay">
+                    <a href="#" class="project-link">View Details →</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">
+                    <div class="project-placeholder">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <span class="project-tag">SECURITY</span>
+                    <h3 class="project-title">Firewall ACL Implementation</h3>
+                    <p class="project-description">Implemented comprehensive ACLs on Cisco routers to control traffic flow and enhance network security.</p>
+                    <div class="project-tech">
+                        <span>ACLs</span>
+                        <span>NAT</span>
+                        <span>IOS</span>
+                    </div>
+                </div>
+                <div class="project-overlay">
+                    <a href="#" class="project-link">View Details →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="section-header">
+            <span class="section-tag">&lt;/contact&gt;</span>
+            <h2 class="section-title">Establish Connection</h2>
+            <p class="section-subtitle">Initiating handshake protocol...</p>
+        </div>
+
+        <div class="contact-container">
+            <div class="contact-info">
+                <div class="info-card">
+                    <div class="info-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                            <polyline points="22,6 12,13 2,6"/>
+                        </svg>
+                    </div>
+                    <div class="info-content">
+                        <span class="info-label">EMAIL</span>
+                        <span class="info-value">student@network.sec</span>
+                    </div>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                            <circle cx="12" cy="10" r="3"/>
+                        </svg>
+                    </div>
+                    <div class="info-content">
+                        <span class="info-label">LOCATION</span>
+                        <span class="info-value">City, Country</span>
+                    </div>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                        </svg>
+                    </div>
+                    <div class="info-content">
+                        <span class="info-label">AVAILABILITY</span>
+                        <span class="info-value">Open for Opportunities</span>
+                    </div>
+                </div>
+            </div>
+
+            <form class="contact-form" id="contact-form">
+                <div class="form-header">
+                    <span class="form-title">// Send Message</span>
+                    <span class="form-status" id="form-status">READY</span>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">NAME_</label>
+                    <input type="text" class="form-input" placeholder="Enter your name" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">EMAIL_</label>
+                    <input type="email" class="form-input" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">MESSAGE_</label>
+                    <textarea class="form-textarea" placeholder="Enter your message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="form-submit">
+                    <span class="submit-text">TRANSMIT</span>
+                    <span class="submit-icon">⟫</span>
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="cyber-footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <span class="logo-bracket">[</span>
+                <span class="logo-text">NETADMIN</span>
+                <span class="logo-bracket">]</span>
+            </div>
+            <div class="footer-links">
+                <a href="#" class="social-link">GitHub</a>
+                <a href="#" class="social-link">LinkedIn</a>
+                <a href="#" class="social-link">Email</a>
+            </div>
+            <div class="footer-info">
+                <span>© 2025 | All Systems Secured</span>
+            </div>
+        </div>
+        <div class="footer-decoration"></div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

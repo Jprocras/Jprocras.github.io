@@ -1,0 +1,223 @@
+{
+  "profile": {
+    "name": "Alex Chen",
+    "initials": "AC",
+    "tagline": "Network Security Specialist",
+    "title": "Junior College Student | Cisco Networking Enthusiast | Linux Administrator",
+    "bio": "Passionate about building secure network infrastructures. Currently pursuing studies in Information Technology with a focus on networking and cybersecurity. Dedicated to learning and implementing best practices in network security.",
+    "location": "City, Country",
+    "email": "alex.chen@network.sec",
+    "availability": "Open for Internships & Entry-Level Positions",
+    "social": {
+      "github": "https://github.com/yourusername",
+      "linkedin": "https://linkedin.com/in/yourusername",
+      "email": "mailto:alex.chen@network.sec"
+    }
+  },
+  "stats": {
+    "projects": 15,
+    "devices": 50,
+    "uptime": 99.9
+  },
+  "skills": {
+    "cisco": {
+      "name": "Cisco Networking",
+      "category": "CISCO_NETWORKING",
+      "level": "INTERMEDIATE",
+      "status": "ACTIVE",
+      "proficiency": 65,
+      "description": "Intermediate knowledge in configuring and managing Cisco network devices",
+      "items": [
+        "Router & Switch Configuration",
+        "VLAN Setup & Management",
+        "Routing Protocols (OSPF, EIGRP)",
+        "Access Control Lists (ACLs)",
+        "Network Troubleshooting",
+        "Cisco IOS Commands",
+        "Inter-VLAN Routing",
+        "STP Configuration"
+      ]
+    },
+    "linux": {
+      "name": "Linux Administration",
+      "category": "LINUX_ADMIN",
+      "level": "BEGINNER",
+      "status": "LEARNING",
+      "proficiency": 35,
+      "description": "Foundational knowledge in Linux system administration",
+      "items": [
+        "Basic Command Line Operations",
+        "File System Navigation",
+        "User & Permission Management",
+        "Package Management (apt, yum)",
+        "Basic Shell Scripting",
+        "SSH Configuration",
+        "System Monitoring",
+        "Log Analysis"
+      ]
+    },
+    "security": {
+      "name": "Network Security",
+      "category": "NETWORK_SECURITY",
+      "level": "LEARNING",
+      "status": "MONITORING",
+      "proficiency": 45,
+      "description": "Growing expertise in network security fundamentals",
+      "items": [
+        "Firewall Configuration",
+        "ACL Implementation",
+        "Network Monitoring",
+        "Threat Assessment",
+        "Security Protocols",
+        "VPN Basics",
+        "Port Security",
+        "Network Hardening"
+      ]
+    },
+    "routing": {
+      "name": "Routing Protocols",
+      "category": "ROUTING_PROTOCOLS",
+      "level": "INTERMEDIATE",
+      "status": "ACTIVE",
+      "proficiency": 60,
+      "description": "Solid understanding of routing protocols and implementation",
+      "items": [
+        "Static Routing",
+        "OSPF Configuration",
+        "EIGRP Setup",
+        "Route Redistribution",
+        "Default Routes",
+        "Routing Tables Analysis"
+      ]
+    },
+    "switching": {
+      "name": "Switching & VLANs",
+      "category": "SWITCHING_VLANS",
+      "level": "INTERMEDIATE",
+      "status": "CONFIGURED",
+      "proficiency": 55,
+      "description": "Proficient in switch configuration and VLAN management",
+      "items": [
+        "VLAN Creation & Management",
+        "Trunk Configuration",
+        "Port Security",
+        "STP/RSTP",
+        "EtherChannel",
+        "Switch Stacking"
+      ]
+    }
+  },
+  "projects": [
+    {
+      "id": 1,
+      "title": "Campus Network Design",
+      "description": "Designed and implemented a multi-VLAN campus network with inter-VLAN routing using Layer 3 switches. Configured OSPF for dynamic routing and implemented ACLs for security.",
+      "category": "CISCO",
+      "tags": ["OSPF", "VLANs", "STP", "ACLs"],
+      "image": null,
+      "icon": "network",
+      "github": "https://github.com/yourusername/campus-network",
+      "demo": null,
+      "featured": true
+    },
+    {
+      "id": 2,
+      "title": "Home Lab Server Setup",
+      "description": "Configured a home lab environment with Ubuntu Server for network services testing. Set up DNS, DHCP, and web servers for learning purposes.",
+      "category": "LINUX",
+      "tags": ["Ubuntu", "SSH", "Apache", "DNS"],
+      "image": null,
+      "icon": "server",
+      "github": "https://github.com/yourusername/homelab-setup",
+      "demo": null,
+      "featured": true
+    },
+    {
+      "id": 3,
+      "title": "Firewall ACL Implementation",
+      "description": "Implemented comprehensive ACLs on Cisco routers to control traffic flow and enhance network security. Created both standard and extended ACLs.",
+      "category": "SECURITY",
+      "tags": ["ACLs", "NAT", "IOS", "Firewall"],
+      "image": null,
+      "icon": "shield",
+      "github": "https://github.com/yourusername/firewall-acl",
+      "demo": null,
+      "featured": true
+    },
+    {
+      "id": 4,
+      "title": "Network Monitoring Dashboard",
+      "description": "Built a simple network monitoring solution using open-source tools to track device status and network performance metrics.",
+      "category": "MONITORING",
+      "tags": ["SNMP", "Monitoring", "Alerts"],
+      "image": null,
+      "icon": "monitor",
+      "github": "https://github.com/yourusername/network-monitor",
+      "demo": null,
+      "featured": false
+    },
+    {
+      "id": 5,
+      "title": "VPN Configuration Lab",
+      "description": "Set up site-to-site VPN tunnels between Cisco routers in a lab environment. Practiced IPSec configuration and troubleshooting.",
+      "category": "SECURITY",
+      "tags": ["VPN", "IPSec", "Encryption"],
+      "image": null,
+      "icon": "lock",
+      "github": "https://github.com/yourusername/vpn-lab",
+      "demo": null,
+      "featured": false
+    }
+  ],
+  "certifications": [
+    {
+      "id": 1,
+      "name": "Cisco Certified Network Associate (CCNA)",
+      "issuer": "Cisco Systems",
+      "date": "In Progress",
+      "status": "pursuing",
+      "credentialId": null,
+      "credentialUrl": null
+    },
+    {
+      "id": 2,
+      "name": "CompTIA Network+",
+      "issuer": "CompTIA",
+      "date": "Planned 2025",
+      "status": "planned",
+      "credentialId": null,
+      "credentialUrl": null
+    },
+    {
+      "id": 3,
+      "name": "Linux Essentials",
+      "issuer": "Linux Professional Institute",
+      "date": "Planned 2025",
+      "status": "planned",
+      "credentialId": null,
+      "credentialUrl": null
+    },
+    {
+      "id": 4,
+      "name": "Introduction to Cybersecurity",
+      "issuer": "Cisco Networking Academy",
+      "date": "2024",
+      "status": "completed",
+      "credentialId": "CISCO-CYBER-2024",
+      "credentialUrl": "https://www.credly.com/"
+    }
+  ],
+  "terminal": {
+    "welcomeMessages": [
+      { "type": "system", "prefix": "[SYSTEM]", "content": "Network Security Assessment Tool v2.5.1" },
+      { "type": "system", "prefix": "[SYSTEM]", "content": "Establishing secure connection..." }
+    ],
+    "command": "trace-route skills --verbose --format=json",
+    "hops": [
+      { "hop": 1, "ip": "192.168.1.1", "location": "LOCAL_GATEWAY", "time": "1ms" },
+      { "hop": 2, "ip": "10.0.0.1", "location": "CORE_SWITCH", "time": "2ms" },
+      { "hop": 3, "ip": "172.16.0.1", "location": "SKILL_SERVER", "time": "4ms" },
+      { "hop": 4, "ip": "172.16.0.100", "location": "MATRIX_DB", "time": "5ms" }
+    ]
+  }
+}
