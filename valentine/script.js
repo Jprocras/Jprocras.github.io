@@ -193,16 +193,23 @@
         const shadowOpacity = Math.min(0.4 + state.noClickCount * 0.05, 0.9);
         btn.style.boxShadow = `0 ${shadowSize}px ${shadowBlur}px rgba(255, 77, 109, ${shadowOpacity})`;
 
+        // Always keep Yes button above No button
+        btn.style.zIndex = '150';
+        btn.style.position = 'relative';
+
         // Add pulse animation after 5 clicks
         if (state.noClickCount >= 5) {
             btn.style.animation = 'pulse 0.8s ease-in-out infinite';
         }
 
-        // Extra growth after 8 clicks
+        // After many clicks, make Yes button fixed and centered (especially for mobile)
         if (state.noClickCount >= 8) {
             state.yesButtonScale += 0.2;
-            btn.style.transform = `scale(${state.yesButtonScale})`;
-            btn.style.zIndex = '200';
+            btn.style.position = 'fixed';
+            btn.style.top = '50%';
+            btn.style.left = '50%';
+            btn.style.transform = `translate(-50%, -50%) scale(${state.yesButtonScale})`;
+            btn.style.zIndex = '300';
         }
     }
 
