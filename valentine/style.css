@@ -1,0 +1,222 @@
+:root {
+    --primary-color: #ff4d6d;
+    --secondary-color: #ff8fa3;
+    --bg-gradient: linear-gradient(135deg, #ff9a9e 0%, #fecfef 99%, #fecfef 100%);
+    --glass-bg: rgba(255, 255, 255, 0.25);
+    --glass-border: rgba(255, 255, 255, 0.5);
+    --text-color: #590d22;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--bg-gradient);
+    overflow: hidden;
+    color: var(--text-color);
+}
+
+.background-animation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+/* Floating Hearts Background */
+.heart-bg {
+    position: absolute;
+    bottom: -10vh;
+    background: rgba(255, 255, 255, 0.4);
+    display: inline-block;
+    height: 30px;
+    margin: 0 10px;
+    width: 30px;
+    z-index: -1;
+    transform: rotate(45deg);
+    animation: float 6s infinite linear;
+}
+
+.heart-bg::before,
+.heart-bg::after {
+    content: "";
+    background: inherit;
+    border-radius: 50%;
+    height: 30px;
+    position: absolute;
+    width: 30px;
+}
+
+.heart-bg::before {
+    top: -15px;
+    left: 0;
+}
+
+.heart-bg::after {
+    left: -15px;
+    top: 0;
+}
+
+@keyframes float {
+    0% {
+        transform: rotate(45deg) translateY(0) scale(0.8);
+        opacity: 1;
+    }
+
+    100% {
+        transform: rotate(45deg) translateY(-120vh) scale(1.2);
+        opacity: 0;
+    }
+}
+
+.container {
+    text-align: center;
+    position: relative;
+    z-index: 10;
+}
+
+.glass-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+    padding: 3rem;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    max-width: 500px;
+    width: 90%;
+    margin: 0 auto;
+    transition: transform 0.3s ease;
+}
+
+.glass-card:hover {
+    transform: translateY(-5px);
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #a4133c;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.gif-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    position: relative;
+    /* Needed for absolute positioning of No button within container if desired, 
+       but we might want to let it roam free on the page or strictly within card. 
+       Let's stick to page scope for better effect as requested. */
+}
+
+button {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    font-family: 'Poppins', sans-serif;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#yesBtn {
+    background-color: #ff4d6d;
+    color: white;
+}
+
+#yesBtn:hover {
+    background-color: #c9184a;
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(255, 77, 109, 0.4);
+}
+
+#noBtn {
+    background-color: white;
+    color: #ff4d6d;
+}
+
+/* No hover effect for No button because it will move! */
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .glass-card {
+        padding: 2rem;
+    }
+
+    button {
+        padding: 12px 24px;
+        font-size: 1rem;
+    }
+}
+
+/* Rejection memes */
+.rejection-meme {
+    position: fixed;
+    width: 150px;
+    height: auto;
+    max-height: 150px;
+    object-fit: contain;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    z-index: 50;
+    animation: popInOut 3s ease-in-out forwards;
+    pointer-events: none;
+}
+
+@keyframes popInOut {
+    0% {
+        transform: scale(0) rotate(-10deg);
+        opacity: 0;
+    }
+
+    15% {
+        transform: scale(1.2) rotate(5deg);
+        opacity: 1;
+    }
+
+    25% {
+        transform: scale(1) rotate(0deg);
+    }
+
+    75% {
+        transform: scale(1) rotate(0deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(0.5) rotate(15deg) translateY(-100px);
+        opacity: 0;
+    }
+}
+
+/* Yes button transition */
+#yesBtn {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yay! 💖</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <style>
+        body {
+            flex-direction: column;
+        }
+
+        .win-meme {
+            position: fixed;
+            width: 120px;
+            height: auto;
+            max-height: 120px;
+            object-fit: contain;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            z-index: 50;
+            animation: floatAround 8s ease-in-out infinite;
+            pointer-events: none;
+        }
+
+        @keyframes floatAround {
+
+            0%,
+            100% {
+                transform: translateY(0) rotate(-5deg) scale(1);
+            }
+
+            25% {
+                transform: translateY(-30px) rotate(5deg) scale(1.1);
+            }
+
+            50% {
+                transform: translateY(-10px) rotate(-3deg) scale(1);
+            }
+
+            75% {
+                transform: translateY(-40px) rotate(8deg) scale(1.05);
+            }
+        }
+
+        .thank-you-section {
+            text-align: center;
+        }
+
+        .thank-you-section h1 {
+            font-size: 2.8rem;
+            color: #c9184a;
+            text-shadow: 2px 2px 8px rgba(255, 77, 109, 0.3);
+        }
+
+        .main-gif {
+            width: 100%;
+            max-width: 350px;
+            border-radius: 20px;
+            box-shadow: 0 8px 30px rgba(255, 77, 109, 0.4);
+            margin: 1rem 0;
+        }
+
+        .message {
+            font-size: 1.5rem;
+            color: #a4133c;
+            margin-top: 1rem;
+        }
+
+        .emoji-rain {
+            font-size: 2rem;
+            animation: bounce 1s ease-in-out infinite;
+        }
+
+        @keyframes bounce {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="background-animation"></div>
+
+    <!-- Win memes container -->
+    <div id="winMemesContainer"></div>
+
+    <div class="container">
+        <div class="glass-card thank-you-section">
+            <h1>Yeheeey! I knew it! 💖🥰</h1>
+            <p class="emoji-rain">💕✨💖✨💕</p>
+
+            <!-- GIF wrapper with sound button on top -->
+            <div class="gif-wrapper"
+                style="position: relative; display: inline-block; cursor: pointer; width: 350px; height: 350px;">
+                <!-- GIF as background -->
+                <img class="main-gif" src="https://media.giphy.com/media/l0HlOvJ7yaacpuSas/giphy.gif"
+                    alt="Valentine's Love"
+                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 20px;">
+                <!-- Clickable iframe on top with low opacity -->
+                <div id="soundContainer" 
+                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 10; display: flex; align-items: center; justify-content: center;">
+                    <iframe id="soundFrame" width="110" height="200"
+                        src="https://www.myinstants.com/instant/careless-whisper/embed/" frameborder="0" scrolling="no"
+                        style="opacity: 0.01; "></iframe>
+                </div>
+            </div>
+
+            <p class="message">Thank you for accepting! 💝</p>
+            <p style="font-size: 1.8rem; margin-top: 1rem;">Happy Valentine's Day! 💘</p>
+        </div>
+    </div>
+
+    <script>
+        // Floating hearts
+        function createHearts() {
+            const bg = document.querySelector('.background-animation');
+            const heartCount = 25;
+            for (let i = 0; i < heartCount; i++) {
+                const heart = document.createElement('div');
+                heart.classList.add('heart-bg');
+                heart.style.left = Math.random() * 100 + 'vw';
+                heart.style.animationDuration = Math.random() * 3 + 4 + 's';
+                heart.style.animationDelay = Math.random() * 5 + 's';
+                bg.appendChild(heart);
+            }
+        }
+        createHearts();
+
+        // Win memes
+        const winMemes = [
+            "https://media.giphy.com/media/3oriO6qJiXajN0TyDu/giphy.gif", // Celebration
+            "https://media.giphy.com/media/26u4cqiYI30juCOGY/giphy.gif", // Dancing
+            "https://media.giphy.com/media/l0MYt5jPR6QX5pnqM/giphy.gif", // Success
+            "https://media.giphy.com/media/xT0xezQGU5xCDJuCPe/giphy.gif", // Happy
+            "https://media.giphy.com/media/l3q2LH45XElELRzRm/giphy.gif", // Victory
+            "https://media.giphy.com/media/artj92V8o75VPL7AeQ/giphy.gif", // Win
+            "https://media.giphy.com/media/g9582DNuQppxC/giphy.gif", // Yes!
+            "https://media.giphy.com/media/l0HlQXkh1wx1RjtUA/giphy.gif" // Champion
+        ];
+
+        function spawnWinMemes() {
+            const container = document.getElementById('winMemesContainer');
+
+            winMemes.forEach((src, index) => {
+                const meme = document.createElement('img');
+                meme.src = src;
+                meme.classList.add('win-meme');
+
+                // Position around the edges
+                const positions = [
+                    { left: '5%', top: '10%' },
+                    { right: '5%', top: '15%' },
+                    { left: '8%', bottom: '20%' },
+                    { right: '8%', bottom: '15%' },
+                    { left: '3%', top: '50%' },
+                    { right: '3%', top: '45%' },
+                    { left: '10%', top: '75%' },
+                    { right: '10%', top: '70%' }
+                ];
+
+                const pos = positions[index % positions.length];
+                Object.assign(meme.style, pos);
+                meme.style.animationDelay = (index * 0.5) + 's';
+
+                container.appendChild(meme);
+            });
+        }
+        spawnWinMemes();
+
+        // Confetti explosion
+        window.addEventListener('load', () => {
+            const duration = 6 * 1000;
+            const animationEnd = Date.now() + duration;
+            const colors = ['#ff4d6d', '#ff8fa3', '#ffccd5', '#fff0f3', '#c9184a'];
+
+            function randomInRange(min, max) {
+                return Math.random() * (max - min) + min;
+            }
+
+            const interval = setInterval(function () {
+                const timeLeft = animationEnd - Date.now();
+
+                if (timeLeft <= 0) {
+                    return clearInterval(interval);
+                }
+
+                const particleCount = 60 * (timeLeft / duration);
+
+                confetti({
+                    particleCount,
+                    startVelocity: 30,
+                    spread: 360,
+                    origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 },
+                    colors: colors
+                });
+                confetti({
+                    particleCount,
+                    startVelocity: 30,
+                    spread: 360,
+                    origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 },
+                    colors: colors
+                });
+            }, 200);
+        });
+    </script>
+</body>
+
+</html>
