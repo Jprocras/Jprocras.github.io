@@ -125,9 +125,7 @@ h1 {
     gap: 20px;
     flex-wrap: wrap;
     position: relative;
-    /* Needed for absolute positioning of No button within container if desired, 
-       but we might want to let it roam free on the page or strictly within card. 
-       Let's stick to page scope for better effect as requested. */
+    min-height: 60px;
 }
 
 button {
@@ -145,6 +143,8 @@ button {
 #yesBtn {
     background-color: #ff4d6d;
     color: white;
+    position: relative;
+    z-index: 10;
 }
 
 #yesBtn:hover {
@@ -156,6 +156,8 @@ button {
 #noBtn {
     background-color: white;
     color: #ff4d6d;
+    transition: left 0.2s ease, top 0.2s ease, padding 0.2s ease;
+    /* Will be positioned fixed by JS when clicked */
 }
 
 /* No hover effect for No button because it will move! */
