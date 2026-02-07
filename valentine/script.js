@@ -284,10 +284,21 @@
 
     function bindEvents() {
         if (elements.noBtn) {
+            // Click event for desktop
             elements.noBtn.addEventListener('click', handleNoClick);
+            // Touch event for mobile - use touchend for better responsiveness
+            elements.noBtn.addEventListener('touchend', function (e) {
+                e.preventDefault(); // Prevent double-firing with click
+                handleNoClick(e);
+            }, { passive: false });
         }
         if (elements.yesBtn) {
             elements.yesBtn.addEventListener('click', handleYesClick);
+            // Touch event for mobile
+            elements.yesBtn.addEventListener('touchend', function (e) {
+                e.preventDefault();
+                handleYesClick();
+            }, { passive: false });
         }
 
         // Update button position on window resize
