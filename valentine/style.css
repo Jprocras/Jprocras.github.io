@@ -160,18 +160,86 @@ button {
 
 /* No hover effect for No button because it will move! */
 
-/* Responsive adjustments */
-@media (max-width: 600px) {
+/* Responsive adjustments - Tablet */
+@media (max-width: 768px) {
     h1 {
-        font-size: 1.8rem;
+        font-size: 2rem;
     }
 
     .glass-card {
         padding: 2rem;
+        max-width: 90%;
+    }
+
+    .gif-container img {
+        max-width: 250px;
     }
 
     button {
-        padding: 12px 24px;
+        padding: 14px 28px;
+        font-size: 1.1rem;
+    }
+}
+
+/* Responsive adjustments - Mobile */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem;
+        line-height: 1.3;
+    }
+
+    .glass-card {
+        padding: 1.5rem;
+        margin: 10px;
+        border-radius: 15px;
+    }
+
+    .gif-container img {
+        max-width: 200px;
+        margin-bottom: 1rem;
+    }
+
+    .buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    button {
+        padding: 15px 40px;
+        font-size: 1.1rem;
+        min-width: 150px;
+        /* Larger touch targets for mobile */
+        min-height: 50px;
+    }
+
+    #noBtn {
+        /* Ensure No button is always tappable on mobile */
+        min-width: 120px;
+        min-height: 50px;
+    }
+
+    .rejection-meme {
+        width: 100px;
+        max-height: 100px;
+    }
+}
+
+/* Extra small screens */
+@media (max-width: 360px) {
+    h1 {
+        font-size: 1.3rem;
+    }
+
+    .glass-card {
+        padding: 1rem;
+    }
+
+    .gif-container img {
+        max-width: 150px;
+    }
+
+    button {
+        padding: 12px 30px;
         font-size: 1rem;
     }
 }
@@ -188,6 +256,13 @@ button {
     z-index: 50;
     animation: popInOut 3s ease-in-out forwards;
     pointer-events: none;
+}
+
+@media (max-width: 480px) {
+    .rejection-meme {
+        width: 80px;
+        max-height: 80px;
+    }
 }
 
 @keyframes popInOut {
@@ -219,4 +294,17 @@ button {
 /* Yes button transition */
 #yesBtn {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Touch-friendly improvements */
+@media (hover: none) and (pointer: coarse) {
+    button {
+        /* Larger buttons for touch devices */
+        padding: 16px 32px;
+    }
+
+    #noBtn {
+        /* Slightly larger touch target */
+        padding: 14px 28px;
+    }
 }
